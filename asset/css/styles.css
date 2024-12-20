@@ -1,0 +1,528 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  height: 100%;
+}
+
+.header,
+.sub-hero,
+.sub-first,
+.sub-second,
+.sub-third,
+.sub-forth,
+.sub-footer {
+  max-width: 80vw;
+  margin: auto;
+}
+
+.header-navlinks {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.logo {
+  color: #000;
+  font-size: 2rem;
+}
+
+.navlinks a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.8rem;
+  background: #000;
+  padding: 0.4rem 1.2rem;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.navlinks i {
+  padding-right: 0.5rem;
+}
+
+.hero-section {
+  background-image: url(/asset/images/header-bg-image.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1;
+}
+
+.hero-section > * {
+  position: relative; /* Ensures text is above the overlay */
+  z-index: 2;
+}
+
+.sub-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 2.5;
+}
+
+.sub-hero h3,
+.sub-hero p {
+  font-size: 1.5rem;
+  line-height: 2.5;
+}
+
+.sub-hero p {
+  color: #000;
+  margin-top: 4rem;
+  text-transform: uppercase;
+}
+
+.first-section {
+  background-image: url(/asset/images/house-icon.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #e7d3b2;
+  padding-bottom: 2rem;
+}
+
+.search {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  position: relative;
+  left: 50%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 2px 1rem rgba(64, 64, 64, 0.5);
+}
+
+/* Form Inputs */
+.search input[type="text"],
+.search select {
+  width: 35%;
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: 0.6rem;
+  border: 1px solid #6f6f6f;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+  text-transform: uppercase;
+}
+
+.search button {
+  width: 20%;
+  padding: 0.6rem 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 1.5rem;
+}
+
+.search button:hover {
+  background-color: #a8a8a9;
+  color: #000;
+}
+
+.article {
+  line-height: 1.5;
+  color: #000;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 3rem;
+  margin-top: 3rem;
+}
+
+.article > h3:last-child {
+  padding-top: 3rem;
+}
+
+.house-list {
+  margin: 6rem 0 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.img img {
+  width: 16rem;
+  border-radius: 0.5rem;
+}
+
+.img {
+  position: relative;
+  display: inline-block;
+}
+
+.img .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.7rem;
+  text-align: center;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.search-box {
+  background: #fff;
+  border: 1px solid #a8a8a9;
+  margin: 2rem auto 1rem;
+  width: 30%;
+  border-radius: 0.2rem;
+  box-shadow: 5px 2px 1rem rgba(64, 64, 64, 0.5);
+}
+
+.search-box input[type="text"] {
+  outline: none;
+  padding: 0.8rem 1rem;
+  border: none;
+  width: 90%;
+}
+
+.search-box input::placeholder {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+.search-box i {
+  color: #a8a8a9;
+  cursor: pointer;
+}
+
+.sub-second {
+  margin-top: 2rem;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.sub-second-article {
+  text-align: center;
+  line-height: 2.5;
+  padding-bottom: 2rem;
+}
+
+.available-house {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.available-house img {
+  width: 80%;
+  border-radius: 0.5rem;
+}
+
+.available {
+  position: relative;
+  display: inline-block;
+}
+
+.available p {
+  position: absolute;
+  top: 75%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.available span {
+  position: absolute;
+  top: 5%;
+  right: 20%;
+  background-color: #fff;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #000;
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.third-section {
+  background-image: url(/asset/images/house-icon.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #e7d3b2;
+  margin-top: 4rem;
+  text-transform: uppercase;
+  padding-bottom: 4rem;
+}
+
+.most-visited {
+  padding: 4rem 0 2rem;
+  line-height: 2;
+}
+
+.most-visited span {
+  display: block;
+  color: #000;
+  font-weight: 700;
+  text-align: center;
+}
+
+.most-visited-houses {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.visited-img {
+  position: relative;
+}
+
+.visited-img img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.visited-img p {
+  position: absolute;
+  top: 75%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.others-most-visited {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  margin: 3rem 0 2rem;
+}
+
+.others-most-visited-img {
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.others-most-visited-img img {
+  width: 100%;
+  border-radius: 0.4rem;
+  margin: auto;
+}
+
+.border {
+  border-right: 1px solid #000;
+  margin: 0 4rem;
+}
+
+.first-text {
+  position: absolute;
+  top: 64%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 5px;
+  width: 77%;
+}
+
+.first-text,
+.second-text {
+  font-size: 0.7rem;
+  font-weight: 800;
+  display: block;
+}
+
+.second-text {
+  color: #000;
+  padding: 1rem;
+}
+
+.others-large-img {
+  position: relative;
+}
+
+.others-large-img img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.others-large-img-text {
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  text-align: center;
+  border-radius: 5px;
+  width: 38%;
+  font-weight: 600;
+  font-size: 0.7rem;
+}
+
+.listed-houses-address {
+  margin-top: 6rem;
+  color: #000;
+}
+
+.listed-text {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.listed-text h3 {
+  margin: 6rem 0 2rem;
+  font-size: 1.5rem;
+}
+
+.listed-text p {
+  margin-bottom: -10px;
+}
+
+.listed-address {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  gap: 1rem;
+  margin-top: 3rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.address{
+  padding: 0 2rem;
+}
+
+.address h4{
+  font-weight: 800;
+}
+
+.forth-section {
+  background-color: #49454f;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  padding: 3rem 0;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.sub-forth span {
+  font-size: 0.7rem;
+}
+
+.sub-forth input[type="email"],
+.sub-forth button {
+  padding: 0.8rem 1rem;
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 0.3rem;
+  width: 30%;
+  font-size: 0.7rem;
+}
+
+.sub-forth button {
+  width: fit-content;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sub-forth input[type="email"]::placeholder {
+  text-transform: uppercase;
+  color: #6f6f6f;
+  font-weight: 600;
+}
+
+.subscribe-form {
+  margin-top: 1.5rem;
+}
+
+.footer-section {
+  background-color: #e7d3b2;
+}
+
+.footer-nav,
+.last-footer {
+  display: flex;
+  justify-content: space-between;
+  line-height: 2.5;
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+
+.footer-nav ul li,
+.last-footer ul li {
+  list-style: none;
+}
+
+.footer-nav a,
+.last-footer a {
+  text-decoration: none;
+  color: #000;
+}
+
+.footer-nav a:hover,
+.last-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Last footer */
+.footer-section1 {
+  background-color: #49454f;
+}
+
+.last-footer {
+  text-align: justify;
+}
+
+.last-footer a {
+  color: #fff;
+}
+
+.email,
+.tel {
+  display: flex;
+  align-items: flex-end;
+}
+
+.last-footer i {
+  padding-right: 0.5rem;
+}

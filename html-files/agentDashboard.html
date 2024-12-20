@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <link rel="stylesheet" href="../asset/css/agentDashboard.css">
+    <title>Agent Dashboard</title>
+</head>
+<body>
+    <header>
+        <nav class="top-nav">
+            <small id="user-name">Welcome Agent He!</small>
+                <div class="edit">
+                    <h5>Edit profile</h5>
+                    <h5 class="sub-log">Subscription plan</h5>
+                    <h5 class="sub-log agent-logout">Logout</h5>
+                </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="first-section">
+        <a class="list-new-house" href="/html-files/addProperty.html"><h3>List new house</h3></a>
+        <section class="first-section">
+            <h3>Bookings/Property request</h3>
+            <h3>My Documents</h3>
+        </section>
+
+        <section class="second-section">
+            <h2>Currently listed</h2>
+            <div class="img-reviewed" id="admin-section">
+                <!-- <img src="../asset/images/agent-currently-listed-house-1.svg" alt="Agent currently listed">
+                <img src="../asset/images/agent-currently-listed-house-2.svg" alt="Agent currently listed">
+                <img src="../asset/images/agent-currently-listed-house-3.svg" alt="Agent currently listed"> -->
+            </div>
+        </section>
+
+        <section class="third-section">
+            <h2>User's favorites based on engagements</h2>
+            <div class="favorite" id="user-section">
+                <img src="../asset/images/agent-favorite-house-1.svg" alt=" Agent favourite house">
+                <img src="../asset/images/agent-favorite-house-2.svg" alt=" Agent favourite house">
+                <img src="../asset/images/agent-favorite-house-3.svg" alt=" Agent favourite house">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <nav class="footer-nav">
+            <!-- First footer navlinks -->
+            <ul class="footer-navlinks">
+                <li><a href="#">Real Estate</a></li>
+                <li><a href="#">Sell Property</a></li>
+                <li><a href="#">Buy Property</a></li>
+                <li><a href="#">Rent Property</a></li>
+                <li><a href="#">Popular Properties</a></li>
+                <li><a href="#">Popular Cities</a></li>
+              </ul>
+  
+              <!-- second footer navlinks -->
+              <ul class="footer-navlinks">
+                <li><a href="#">Property Services</a></li>
+                <li><a href="#">Find Agents</a></li>
+                <li><a href="#">Search Property</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Advices</a></li>
+                <li><a href="#">Blogs</a></li>
+              </ul>
+  
+               <!-- Third footer navlinks -->
+                <ul class="footer-navlinks">
+                  <li><a href="#">Our Company</a></li>
+                  <li><a href="#">About US</a></li>
+                  <li><a href="#">Locate Us</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+  
+                <!-- fourth footer navlinks -->
+                 <ul class="footer-navlinks">
+                  <li><a href="#">Social Media</a></li>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">LinkedIn</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">Pinterest</a></li>
+                  <li><a href="#">Instagram </a></li>
+                 </ul>
+        </nav>
+    </footer>
+
+    <footer class="footer-2">
+        <nav class="last-footer">
+            <ul class="social">
+                <big>Social Media:</big>
+                <li><i class="fa-brands fa-x-twitter"></i><a href="#">X (Formally Twitter)</a></li>
+                <li><i class="fa-brands fa-linkedin-in"></i><a href="#">LinkedIn</a></li>
+                <li><i class="fa-brands fa-facebook-f"></i><a href="#">Facebook</a></li>
+                <li><i class="fa-brands fa-whatsapp"></i><a href="#">Whatsapp</a></li>
+                <li><i class="fa-brands fa-instagram"></i><a href="#">Instagram</a></li>
+              </ul>
+
+              <ul class="email">
+                <li><i class="fa-regular fa-envelope"></i><a href="mailto:info@cityhome.com.ng">Email us @cityhomes.ng.techyjaunt.com</a></li>
+              </ul>
+
+              <ul class="tel">
+                <li><i class="fa-sharp fa-solid fa-phone-volume"></i></i><a href="tel: +234567890"></i>+234567890</a></li>
+              </ul>
+        </nav>
+    </footer>
+    <script>
+        // Logout section
+    const agentLogout = document.querySelector('.agent-logout');
+
+    agentLogout.addEventListener('click', () => {
+    alert('Agent Logout Successfully');
+    window.location.href = './agentLogin.html';
+});
+
+        // Call displayProperties on page load to show existing properties
+        document.addEventListener('DOMContentLoaded', displayProperties);
+    </script>
+    <script src="/asset/javascript/agentListing.js" defer></script>
+    <script src="../asset/javascript/dashboard.js" defer></script>
+</body>
+</html>

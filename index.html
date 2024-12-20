@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./asset/css/styles.css" />
+    <title>CityHomes</title>
+  </head>
+  <body>
+
+    <!-- Header -->
+    <header class="header">
+      <nav class="header-navlinks">
+        <div class="logo">cityHomes</div>
+        <div class="navlinks">
+          <span><a href="./html-files/loginAccountLink.html" class="login" target="_blank">Login</a></span>
+          <span
+            ><a href="./html-files/createAccountLink.html"
+              target="_blank"><i class="fa-regular fa-circle-user"></i>Create Account</a
+            ></span
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero section -->
+      <section class="hero-section">
+        <div class="sub-hero">
+          <h1>CityHomes</h1>
+          <h3>A Place of Dreams</h3>
+          <h3>Find Houses in Nigeria</h3>
+          <p>Select over 5,000 houses across Nigeria</p>
+        </div>
+      </section>
+
+      <!-- First section: Search for new houses -->
+      <section class="first-section">
+        <div class="sub-first">
+          <div class="search">
+            <form action="">
+              <input
+                type="text"
+                name="text"
+                placeholder="Search for a particular estate"
+              />
+              <select name="price" id="price">
+                <option value="price" disabled selected>Price Range</option>
+                <option value="2m">2 millions</option>
+                <option value="4m">4 millions</option>
+                <option value="5m">5 millions</option>
+                <option value="6m+">6 millions and above</option>
+              </select>
+              <button type="submit">Find</button>
+            </form>
+          </div>
+
+          <!-- Some text to welcome users -->
+          <article class="article">
+            <h3>
+              WELCOME TO CITYHOMES, YOUR TRUSTED PARTNER IN FINDING YOUR DREAM
+              HOME!
+            </h3>
+            <h3>
+              UNLOCK THE DOOR TO YOUR OERFECT LIFE WITH OUR EXPERT REAL ESTATE
+              SOLUTIONS.
+            </h3>
+            <h3>below are some of the best searched estates in nigeria</h3>
+          </article>
+
+          <!-- House listed -->
+          <div class="house-list">
+            <div class="img">
+              <img src="./asset/images/first-house.svg" alt="First House" />
+              <div class="text">
+                <p>Estates in Rivers</p>
+                <span>1,702</span>
+              </div>
+            </div>
+
+            <div class="img">
+              <img src="./asset/images/second-house.svg" alt="Second House" />
+              <div class="text">
+                <p>Estates in Abuja</p>
+                <span>2,046</span>
+              </div>
+            </div>
+
+            <div class="img">
+              <img src="./asset/images/third-house.svg" alt="Third House" />
+              <div class="text">
+                <p>Estates in Lagos</p>
+                <span>1,006</span>
+              </div>
+            </div>
+
+            <div class="img">
+              <img src="./asset/images/fourth-house.svg" alt="Fourth House" />
+              <div class="text">
+                <p>Estates in Kano</p>
+                <span>583</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="search-box">
+          <input
+            type="text"
+            name="text"
+            id="name"
+            placeholder="Search for a particular estate"
+          />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </section>
+
+      <secttion class="second-section">
+        <div class="sub-second">
+          <article class="sub-second-article">
+          <h2>today's top housing deals in nigeria</h2>
+          <p>a selection of the houses only available this month</p>
+        </article>
+          <div class="available-house">
+            <div class="available">
+              <img src="./asset/images/available-house-1.svg" alt="Selected House for the month">
+              <p>estates in abuja</p>
+              <span>30% off</span>
+            </div>
+            <div class="available">
+              <img src="./asset/images/available-house-2.svg" alt="Selected House for the month">
+              <p>estates in rivers</p>
+              <span>50% off</span>
+            </div>
+            <div class="available">
+              <img src="./asset/images/available-house-3.svg" alt="Selected House for the month">
+              <p>estates in lagos</p>
+              <span>46% off</span>
+            </div>
+          </div>
+        </div>
+      </secttion>
+
+      <section class="third-section">
+        <div class="sub-third">
+            <article class="most-visited">
+              <span>states with the most visited estates</span>
+              <span>based on engagements in nigeria</span>
+            </article>
+            <div class="most-visited-houses">
+                <div class="visited-img">
+                  <img src="./asset/images/most-visited-houses-1.svg" alt="Most visited house">
+                  <p>abuja</p>
+                </div>
+                <div class="visited-img">
+                  <img src="./asset/images/most-visited-houses-2.svg" alt="Most visited house">
+                  <p>lagos</p>
+                </div>
+                <div class="visited-img">
+                  <img src="./asset/images/most-visited-houses-3.svg" alt="Most visited house">
+                  <p>rivers</p>
+                </div>
+            </div>
+            <!-- Other most visited houses -->
+            <div class="others-most-visited">
+              <div class="others-most-visited-img">
+                <img src="./asset/images/others-most-visited-houses-1.svg" alt="Others most visted houses">
+                <span class="first-text">housing estate rebecca  we offer the best in housing with our range of apartments for your budget </span>
+                <span class="second-text">our apartments range from 70k to 500k with the best in services from security to relaxation gardens</span>
+              </div>
+
+              <span class="border"></span>
+
+              <div class="others-most-visited-img">
+                <img src="./asset/images/others-most-visited-houses-2.svg" alt="Others most visted houses">
+                <span class="first-text">housing estate rebecca  we offer the best in housing with our range of apartments for your budget </span>
+                <span class="second-text">housing estate rebecca  we offer the best in housing with our range of apartments for your budget</span>
+              </div>
+            </div>
+
+            <div class="others-large-img">
+              <img src="./asset/images/large-image.svg" alt="Large Image showing different houses">
+              <span class="others-large-img-text">Jonathan Estate and enterprise  we give you heaven on earth  in housing with our clients choosing whom they want to live with by choosing your neighbours.</span>
+            </div>
+
+            <div class="listed-houses-address">
+                <article class="listed-text">
+                  <h3>which city do you want to own a property in nigeria</h3>
+                  <p>over 7,000 registered properties registered for you to choose from</p>
+                  <img src="./asset/images/diamond-arrow-line.svg" alt="Diamond double edge line">
+                </article>
+
+                <div class="listed-address">
+                  <div class="address">
+                    <h4>Estates in Abia</h4>
+                    <p>297 Estates in Abia with over 212 estate Reviews</p>
+                  </div>
+                  <div class="address">
+                    <h4>Estates in adamawa</h4>
+                    <p>297 Estates in Adamawa with over 0 estate Reviews</p>
+                  </div>
+                  <div class="address">
+                    <h4>Estates in anambra</h4>
+                    <p>28 Estates in Anambra with over 69 estate Reviews</p>
+                  </div>
+                  <div class="address">
+                    <h4>Estates in anambra</h4>
+                    <p>28 Estates in Anambra with over 69 estate Reviews</p>
+                  </div>
+                  <div class="address">
+                    <h4>Estates in Bauchi</h4>
+                    <p>237 Estates in Bauchi with over 112 estate Reviews</p>
+                  </div>
+                  <div class="address">
+                    <h4>Estates in jos</h4>
+                    <p>150 Estates in jos with over 30 estate Reviews</p>
+                  </div>
+                  <div class="address">
+                    <h4>Estates in nasarawa</h4>
+                    <p>297 Estates in nasarawa with over 7 estate Reviews</p>
+                  </div>
+                  <div class="address">
+                    <h4>Estates in anambra</h4>
+                    <p>28 Estates in Anambra with over 69 estate Reviews</p>
+                  </div>
+                  <div class="address">
+                    <h4>Estates in Delta</h4>
+                    <p>500 Estates in Delta with over 312 estate Reviews</p>
+                  </div>
+                  <div class="address">
+                    <h4>Estates in kaduna</h4>
+                    <p>400 Estates in kaduna with over 135 estate Reviews</p>
+                  </div>
+                  <div class="address">
+                    <h4>Estates in kogi</h4>
+                    p
+                    261 Estates in kogi with over 65 estate Reviews
+                  </div>
+                  <div class="address">
+                    <h4>Estates in anambra</h4>
+                    <p>28 Estates in Anambra with over 69 estate Reviews</p>
+                  </div>
+                  <div class="address">
+                    <h4>Estates in Fct</h4>
+                    <p>  2,046 Estates in Abuja with over 1,300 estate Reviews</p>
+                  </div>
+                  <div class="address">
+                    <h4>Estates in benue</h4>
+                    <p>70 Estates in benue with over 2 estate Reviews</p>
+                  </div>
+                  <div class="address">
+                    <h4>Estates in ekiti</h4>
+                    <p>230 Estates in ekiti with over 220 estate Reviews</p>
+                  </div>
+                  <div class="address">
+                    <h4>Estates in anambra</h4>
+                    <p>28 Estates in Anambra with over 69 estate Reviews</p>
+                  </div>
+                  <div class="address">
+                    <h4>Estates in Kano</h4>
+                    <p>586 Estates in kano with over 212 estate Reviews</p>
+                  </div>
+                  <div class="address">
+                    <h4>Estates in edo</h4>
+                    <p>98 Estates in edo with over 15 estate Reviews</p>
+                  </div>
+                  <div class="address">
+                    <h4>Estates in imo</h4>
+                    <p>346 Estates in imo with over 378 estate Reviews</p>
+                  </div>
+                  <div class="address">
+                    <h4>Estates in anambra</h4>
+                    <p>28 Estates in Anambra with over 69 estate Reviews</p>
+                  </div>
+                  <div class="address">
+                    <h4>Estates in Lagos</h4>
+                    <p>1,006 Estates in lagos with over 529 estate Reviews</p>
+                  </div>
+                  <div class="address">
+                    <h4>Estates in kebbi</h4>
+                    <p>25 Estates in kebbi with over 57 estate Reviews</p>
+                  </div>
+                  <div class="address">
+                    <h4>Estates in akwa ibom</h4>
+                    <p>477 Estates in Akwa with over 370 estate Reviews</p>
+                  </div>
+                  <div class="address">
+                    <h4>Estates in anambra</h4>
+                    <p>28 Estates in Anambra with over 69 estate Reviews</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <div class="forth-section">
+        <div class="sub-forth">
+          <h4>Special Estate deals and offers</h4>
+          <span>Enter your Email to receive special offers</span>
+          <form action="" class="subscribe-form">
+            <input type="email" name="email" id="email" placeholder="enter your email">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer section -->
+     <footer class="footer-section">
+        <div class="sub-footer">
+          <nav class="footer-nav">
+            <!-- First footer navlinks -->
+            <ul class="footer-navlinks">
+              <li><a href="#">Real Estate</a></li>
+              <li><a href="#">Sell Property</a></li>
+              <li><a href="#">Buy Property</a></li>
+              <li><a href="#">Rent Property</a></li>
+              <li><a href="#">Popular Properties</a></li>
+              <li><a href="#">Popular Cities</a></li>
+            </ul>
+
+            <!-- second footer navlinks -->
+            <ul class="footer-navlinks">
+              <li><a href="#">Property Services</a></li>
+              <li><a href="#">Find Agents</a></li>
+              <li><a href="#">Search Property</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Advices</a></li>
+              <li><a href="#">Blogs</a></li>
+            </ul>
+
+             <!-- Third footer navlinks -->
+              <ul class="footer-navlinks">
+                <li><a href="#">Our Company</a></li>
+                <li><a href="#">About US</a></li>
+                <li><a href="#">Locate Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+              </ul>
+
+              <!-- fourth footer navlinks -->
+               <ul class="footer-navlinks">
+                <li><a href="#">Social Media</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Pinterest</a></li>
+                <li><a href="#">Instagram </a></li>
+               </ul>
+          </nav>
+        </div>
+     </footer>
+
+     <!-- Last footer -->
+      <footer class="footer-section1">
+          <div class="sub-footer">   
+              <nav class="last-footer">
+                <ul class="social">
+                <big>Social Media:</big>
+                <li><i class="fa-brands fa-x-twitter"></i><a href="#">X (Formally Twitter)</a></li>
+                <li><i class="fa-brands fa-linkedin-in"></i><a href="#">LinkedIn</a></li>
+                <li><i class="fa-brands fa-facebook-f"></i><a href="#">Facebook</a></li>
+                <li><i class="fa-brands fa-whatsapp"></i><a href="#">Whatsapp</a></li>
+                <li><i class="fa-brands fa-instagram"></i><a href="#">Instagram</a></li>
+              </ul>
+
+              <ul class="email">
+                <li><i class="fa-regular fa-envelope"></i><a href="mailto:info@cityhome.com.ng">Email us @cityhomes.ng.techyjaunt.com</a></li>
+              </ul>
+
+              <ul class="tel">
+                <li><i class="fa-sharp fa-solid fa-phone-volume"></i></i><a href="tel: +234567890"></i>+234567890</a></li>
+              </ul>
+              </nav>
+          </div>
+      </footer>
+  </body>
+</html>

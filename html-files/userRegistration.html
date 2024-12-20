@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <link rel="stylesheet" href="/asset/css/userRegistration.css">
+    <title>User Registration form</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="img">
+                <img src="/asset/images/happy-man-with-house.svg" alt="Happy man with house">
+                <span>cityHomes</span>
+            </div>
+            <div class="form" id='signup-form'>
+                <h2>Create an account</h2>
+                <p>Already have an account? <a href="/html-files/userLogin.html">Login</a> here</p>
+                <form action="">
+                    <label for="name" class="label">
+                        <input type="text" name="fname" id="fname" placeholder="First Name" required>
+                        <input type="text" name="lname" id="lname" placeholder="Last Name" required>
+                    </label>
+                    <input type="email" class="email" name="email" id="email" placeholder="Email" required>
+                    <input type="text" class="address" name="address" id="address" placeholder="Address" required>
+                    <input type="text" class="phone-number" name="phone-number" id="phone-number" placeholder="Phone Number" required>
+                    <input type="password" class="password" name="password" id="password" placeholder="Enter your password" required>
+                    <div class="terms">
+                        <input type="checkbox" class="checkbox" name="check" id="check" required>
+                        <label for="termsAndConditions">I agree to the Terms & Conditions</label>
+                    </div>
+                    <button class="button" type="submit">Create Account</button>
+                </form>
+                <p>Or register with</p>
+                <div class="social">
+                    <div class="icon"><i class="fa-sharp fa-solid fa-g"></i></div>
+                    <div class="icon"><i class="fa-brands fa-apple"></i></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="/asset/javascript/userRegister.js"></script>
+</html>

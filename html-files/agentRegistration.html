@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../asset/css/agentRegistration.css">
+    <title>Agent Registration form</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="img">
+                <img src="../asset/images/hand-holding-house-real-estate-property-model.svg" alt="Hand holding house">
+                <span>cityHomes</span>
+            </div>
+            <div class="form" id="signup-form">
+                <h2>Create an account</h2>
+                <p>Already have an account? <a href="/html-files/agentLogin.html">Login</a> here</p>
+                <form action="">
+                    <input type="text" name="name" id="name" placeholder="Agent Name" required>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <input type="text" name="address" id="address" placeholder="Address" required>
+                    <input type="text" class="phone-number" name="phone-number" id="phone-number" placeholder="Phone Number" required>
+                    <input type="password" name="password" id="password" placeholder="Enter your Password" required>
+                    <div class="checkbox terms">
+                        <input type="checkbox" name="check" id="check" required>
+                        <label for="termsAndConditions">I agree to the Terms & Conditions</label>
+                    </div>
+                    <button class="button" type="submit">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="/asset/javascript/agentRegister.js"></script>
+</html>

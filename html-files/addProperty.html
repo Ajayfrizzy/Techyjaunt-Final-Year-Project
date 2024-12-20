@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Property</title>
+    <link rel="stylesheet" href="/asset/css/addProperty.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./agentDashboard.html">Back</a>
+        </nav>
+    </header>
+    <h1>Admin Section</h1>
+    <form id="property-form">
+        <label for="picture">Upload Picture:</label>
+        <input type="file" id="picture" name="picture" accept="image/*" required>
+        <br>
+        <label for="name">Property Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="price">Price:</label>
+        <input type="text" id="price" name="price" required>
+        <br>
+        <button type="submit">Add Property</button>
+    </form>
+    <div id="admin-section"></div>
+
+    <!-- Load the script first -->
+    <script src="/asset/javascript/agentListing.js"></script>
+    
+    <!-- Then set up the event listeners -->
+    <script>
+        document.getElementById('property-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const picture = document.getElementById('picture').files[0];
+            const name = document.getElementById('name').value;
+            const price = document.getElementById('price').value;
+            
+            if (picture) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    try {
+                        addProperty(e.target.result, name, price);
+                    } catch (error) {
+                        console.error('Error in form submission:', error);
+                        alert('Error adding property. Please try again.');
+                    }
+                };
+                reader.onerror = function() {
+                    console.error('Error reading file');
+                    alert('Error reading image file. Please try another image.');
+                };
+                reader.readAsDataURL(picture);
+            }
+        });
+
+        // Wait for both DOM and script to be ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', displayProperties);
+        } else {
+            displayProperties();
+        }
+    </script>
+</body>
+</html>
