@@ -39,11 +39,13 @@
 
         <section class="second-section">
             <h2>Recently viewed estates</h2>
+            <button class="btn left-btn" id="backBtn"><i class="fas fa-chevron-left"></i></button>
+
             <div class="img-reviewed list-property" id="user-section">
-                <!-- <img src="../asset/images/user-reviewed-house-1.svg" alt="Recently viewed houses">
-                <img src="../asset/images/user-reviewed-house-2.svg" alt="Recently viewed houses">
-                <img src="../asset/images/user-reviewed-house-3.svg" alt="Recently viewed houses"> -->
+              
             </div>
+
+            <button class="btn right-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
         </section>
 
         <section class="third-section">
@@ -167,7 +169,7 @@
         // Call displayProperties on page load to show existing properties
         document.addEventListener('DOMContentLoaded', displayProperties);
     </script>
-    <script src="/asset/javascript/agentListing.js" defer></script>
-    <script src="../asset/javascript/dashboard.js" defer></script>
+    <script src="/asset/javascript/userProperties.js" defer></script>
+    <script src="/asset/javascript/dashboard.js" defer></script>
 </body>
 </html>

@@ -17,52 +17,39 @@
         <label for="picture">Upload Picture:</label>
         <input type="file" id="picture" name="picture" accept="image/*" required>
         <br>
-        <label for="name">Property Name:</label>
-        <input type="text" id="name" name="name" required>
+        <label for="title">Property Title:</label>
+        <input type="text" id="title" name="title" required>
+        <br>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" required>
+        <br>
+        <label for="type">Type:</label>
+        <select id="type" name="type" required>
+            <option value="rent">Rent</option>
+            <option value="sale">Sale</option>
+        </select>
         <br>
         <label for="price">Price:</label>
-        <input type="text" id="price" name="price" required>
+        <input type="number" id="price" name="price" required pattern="^[0-9$,.]*$" title="Please enter a valid price">
+        <br>
+        <label for="amenities">Amenities:</label>
+        <input type="text" id="amenities" name="amenities" required>
+        <br>
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+            <option value="available">Available</option>
+            <option value="rented">Rented</option>
+        </select>
+        <br>
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="Address" required>
         <br>
         <button type="submit">Add Property</button>
     </form>
     <div id="admin-section"></div>
 
     <!-- Load the script first -->
+    <script src="https://cdn.jsdelivr.net/npm/compressorjs/dist/compressor.min.js"></script>
     <script src="/asset/javascript/agentListing.js"></script>
-    
-    <!-- Then set up the event listeners -->
-    <script>
-        document.getElementById('property-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            const picture = document.getElementById('picture').files[0];
-            const name = document.getElementById('name').value;
-            const price = document.getElementById('price').value;
-            
-            if (picture) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    try {
-                        addProperty(e.target.result, name, price);
-                    } catch (error) {
-                        console.error('Error in form submission:', error);
-                        alert('Error adding property. Please try again.');
-                    }
-                };
-                reader.onerror = function() {
-                    console.error('Error reading file');
-                    alert('Error reading image file. Please try another image.');
-                };
-                reader.readAsDataURL(picture);
-            }
-        });
-
-        // Wait for both DOM and script to be ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', displayProperties);
-        } else {
-            displayProperties();
-        }
-    </script>
 </body>
 </html>

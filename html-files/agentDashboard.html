@@ -35,16 +35,16 @@
 
         <section class="second-section">
             <h2>Currently listed</h2>
+            <button class="btn left-btn" id="backBtn"><i class="fas fa-chevron-left"></i></button>
             <div class="img-reviewed" id="admin-section">
-                <!-- <img src="../asset/images/agent-currently-listed-house-1.svg" alt="Agent currently listed">
-                <img src="../asset/images/agent-currently-listed-house-2.svg" alt="Agent currently listed">
-                <img src="../asset/images/agent-currently-listed-house-3.svg" alt="Agent currently listed"> -->
+
             </div>
+            <button class="btn right-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
         </section>
 
         <section class="third-section">
             <h2>User's favorites based on engagements</h2>
-            <div class="favorite" id="user-section">
+            <div class="favorite">
                 <img src="../asset/images/agent-favorite-house-1.svg" alt=" Agent favourite house">
                 <img src="../asset/images/agent-favorite-house-2.svg" alt=" Agent favourite house">
                 <img src="../asset/images/agent-favorite-house-3.svg" alt=" Agent favourite house">
@@ -116,19 +116,39 @@
               </ul>
         </nav>
     </footer>
-    <script>
+    <!-- Replace the existing script section at the bottom of your HTML with this: -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
         // Logout section
-    const agentLogout = document.querySelector('.agent-logout');
+        const agentLogout = document.querySelector('.agent-logout');
+        
+        agentLogout.addEventListener('click', () => {
+            localStorage.removeItem('authToken'); // Clear the auth token
+            alert('Agent Logout Successfully');
+            window.location.href = './agentLogin.html';
+        });
+    });
 
-    agentLogout.addEventListener('click', () => {
-    alert('Agent Logout Successfully');
-    window.location.href = './agentLogin.html';
-});
 
-        // Call displayProperties on page load to show existing properties
-        document.addEventListener('DOMContentLoaded', displayProperties);
-    </script>
-    <script src="/asset/javascript/agentListing.js" defer></script>
-    <script src="../asset/javascript/dashboard.js" defer></script>
+    const imgReviewed = document.querySelector('.img-reviewed');
+    const nextBtn =  document.querySelector('#nextBtn');
+    const backBtn = document.querySelector('#backBtn');
+
+    nextBtn.addEventListener('click', ()=>{
+        imgReviewed.scrollLeft +=900;
+        imgReviewed.style.scrollBehavior = "smooth";
+        console.log("Next button clicked")
+    })
+
+    backBtn.addEventListener('click', ()=>{
+        imgReviewed.scrollLeft -=900;
+        imgReviewed.style.scrollBehavior = "smooth";
+        console.log("Back button clicked")
+    })
+
+</script>
+
+<script src="/asset/javascript/agentListing.js" defer></script>
+<script src="/asset/javascript/dashboard.js" defer></script>
 </body>
 </html>
