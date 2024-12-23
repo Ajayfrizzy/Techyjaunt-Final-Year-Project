@@ -43,7 +43,7 @@ document
         status: formData.get("status"),
         // Change this part
         location: {
-          address: formData.get("location")  // or formData.get("address") depending on your form field name
+          address: formData.get("address")  // or formData.get("address") depending on your form field name
         }
       };
 
@@ -174,7 +174,7 @@ async function displayProperties() {
                   .map((a) => escapeHtml(a))
                   .join(", ")}</p>
                 <p>Status: ${escapeHtml(property.status)}</p>
-                <p>Location: ${escapeHtml(property.location)}</p>
+                <p>Location: ${property.location && property.location.address ? escapeHtml(property.location.address) : 'Address not provided'}</p>
 <button class="delete-btn" data-property-id="${property._id}">Delete</button>
             </div>
         `

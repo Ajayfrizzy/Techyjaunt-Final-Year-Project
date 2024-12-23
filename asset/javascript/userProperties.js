@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         .map((a) => escapeHtml(a))
                         .join(", ")}</p>
                       <p>Status: ${escapeHtml(property.status)}</p>
-                      <p>Location: ${escapeHtml(property.location)}</p>
+                      <p>Location: ${property.location && property.location.address ? escapeHtml(property.location.address) : 'Address not provided'}</p>
                   </div>
               `
             )
